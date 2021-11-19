@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+div{
+    width: 60%;
+}
+#h1 {
+    font-size: 80px;
+    text-align: center;
+    height: 200px;
+    padding: 35px;
+}
+#button2{
+    text-align: end;
+}
+#button2 button{
+    margin-top: 16px;
+}
