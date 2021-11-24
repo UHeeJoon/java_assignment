@@ -1,7 +1,6 @@
 package com.sparta_3week_test.assignment.service;
 import com.sparta_3week_test.assignment.models.Memo;
-import com.sparta_3week_test.assignment.models.MemoRepository;
-import com.sparta_3week_test.assignment.models.MemoRequestDto;
+import com.sparta_3week_test.assignment.repository.MemoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

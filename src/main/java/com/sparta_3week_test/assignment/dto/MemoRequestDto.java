@@ -1,4 +1,4 @@
-package com.sparta_3week_test.assignment.models;
+package com.sparta_3week_test.assignment.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

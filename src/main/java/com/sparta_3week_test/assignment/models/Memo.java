@@ -1,5 +1,6 @@
 package com.sparta_3week_test.assignment.models;
 
+import com.sparta_3week_test.assignment.dto.MemoRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

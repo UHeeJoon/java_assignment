@@ -9,7 +9,7 @@ function writePost() {
         data: JSON.stringify({'title': title, 'name': name, 'memos': desc}),
         success: function (response) {
             alert("글 작성이 완료되었습니다");
-            window.location.href = "index.html";
+            window.location.href = "/";
         }
     })
 }
