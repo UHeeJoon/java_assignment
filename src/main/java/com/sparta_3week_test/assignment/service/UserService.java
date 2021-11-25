@@ -13,7 +13,6 @@ import java.util.Optional;
 public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
-    private static final String ADMIN_TOKEN = "AAABnv/xRVklrnYxKZ0aHgTBcXukeZygoC";
 
     @Autowired
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
@@ -31,7 +30,8 @@ public class UserService {
 
 // 패스워드 암호화
         String password = passwordEncoder.encode(requestDto.getPassword());
-        String email = requestDto.getEmail();
+        User user = new User(username, password);
+        userRepository.save(user);
 
     }
 }

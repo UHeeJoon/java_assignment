@@ -4,7 +4,7 @@ function writePost() {
     let desc = $('#floatingTextarea2').val();
     $.ajax({
         type: "POST",
-        url: "api/memos",
+        url: "api/memos/post",
         contentType: "application/json",
         data: JSON.stringify({'title': title, 'name': name, 'memos': desc}),
         success: function (response) {

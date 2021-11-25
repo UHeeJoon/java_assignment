@@ -38,6 +38,9 @@ public class UserController {
     @PostMapping("/user/signup")
     public String registerUser(SignupRequestDto requestDto) {
         userService.registerUser(requestDto);
+
+        System.out.println(requestDto.getUsername());
+
         return "redirect:/user/login";
     }
 

@@ -16,7 +16,7 @@ public class MemoController {
     private final MemoRepository memoRepository;
     private final MemoService memoService;
 
-    @PostMapping("api/memos")
+    @PostMapping("api/memos/post")
     public Memo createMemo(@RequestBody MemoRequestDto requestDto) {
         Memo memo = new Memo(requestDto);
         return memoRepository.save(memo);
@@ -24,7 +24,6 @@ public class MemoController {
 
     @GetMapping("/api/memos")
     public List<Memo> getMemos() {
-
         return memoRepository.findAllByOrderByCreateAtDesc();
     }
 

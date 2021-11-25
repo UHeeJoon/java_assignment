@@ -6,7 +6,7 @@ $(document).ready(function () {
             $('#container').empty();
             for (let i = 0; i < response.length; i++) {
                 let memo = response[i];
-                let id = response.length - memo.id + 1;
+                let id = response.length - memo.id + 2;
                 let tempHtml = addHtml(memo, id);
                 $('#container').append(tempHtml);
             }
