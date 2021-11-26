@@ -14,6 +14,7 @@ public class HomeController {
             model.addAttribute("username", userDetails.getUsername() +"님");
             return "index";
         }
+
         return "index";
     }
 }

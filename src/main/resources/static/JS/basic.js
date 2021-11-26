@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
     $.ajax({
         type: 'GET',
         url: '/api/memos',
@@ -6,23 +8,21 @@ $(document).ready(function () {
             $('#container').empty();
             for (let i = 0; i < response.length; i++) {
                 let memo = response[i];
-                let id = response.length - memo.id + 2;
-                let tempHtml = addHtml(memo, id);
+                let tempHtml = addHtml(memo);
                 $('#container').append(tempHtml);
             }
         }
     })
 })
 
-function addHtml(memo, id) {
+function addHtml(memo) {
     let date = memo.createAt.substring(0, 10);
     let time = memo.createAt.substring(11, 19);
     return `<tr>
-            <td class="order">${id}</td>
+            <td class="name" th:text="${username}"></td>
             <td class="title" title="${memo.title}">
                 <a onclick="modal(${memo.id})" id="title">${memo.title}</a>
             </td>
-            <td class="name">${memo.name}</td>
             <td class="time">${date}, ${time}</td>
         </tr>`
 }
@@ -39,9 +39,10 @@ function modal(id) {
         }
     })
 }
-function createModal(response){
+
+function createModal(response) {
     title = response.title;
-    date = response.createAt.substring(0, 10) +", "+ response.createAt.substring(11, 19);
+    date = response.createAt.substring(0, 10) + ", " + response.createAt.substring(11, 19);
     name = response.name;
     desc = response.memos;
     return `<div class="popup">
@@ -57,6 +58,7 @@ function createModal(response){
             </div>
         </div>`
 }
-function removeModal(){
+
+function removeModal() {
     $('#modal').removeClass('active')
 }

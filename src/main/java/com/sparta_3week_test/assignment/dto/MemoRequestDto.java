@@ -8,6 +8,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MemoRequestDto {
     private final String title;
-    private final String name;
     private final String memos;
 }

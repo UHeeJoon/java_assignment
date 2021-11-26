@@ -15,9 +15,6 @@ public class Memo extends Timestamped {
     @Id
     private Long id;
 
-    @Column(nullable = false )
-    private String name;
-
     @Column(nullable = false)
     private String title;
 
@@ -25,7 +22,6 @@ public class Memo extends Timestamped {
     private String memos;
 
     public Memo(MemoRequestDto requestDto) {
-        this.name = requestDto.getName();
         this.title = requestDto.getTitle();
         this.memos = requestDto.getMemos();
     }
